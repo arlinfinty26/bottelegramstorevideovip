@@ -1,0 +1,30 @@
+{
+    "store_name": "ARL INFINITY",
+    "tagline": "Toko Digital Terpercaya",
+    "description": "ARL INFINITY adalah toko online terpercaya yang menyediakan berbagai produk digital & fisik berkualitas.",
+    "admin_username": "username_anda",
+    "channel_username": "channel_anda",
+    "payments": {
+        "bca": {
+            "name": "BCA",
+            "number": "1234567890",
+            "holder": "/cancel"
+        },
+        "dana": {
+            "name": "DANA",
+            "number": "081234567890",
+            "holder": "ARL INFINITY"
+        },
+        "gopay": {
+            "name": "GoPay",
+            "number": "081234567890",
+            "holder": "ARL INFINITY"
+        },
+        "qris": {
+            "name": "QRIS",
+            "number": "Scan QR di channel",
+            "holder": "/cancel"
+        }
+    },
+    "min_topup": 10000
+}

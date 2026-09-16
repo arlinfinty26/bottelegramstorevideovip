@@ -1,0 +1,24 @@
+{
+    "1": {
+        "name": "VIDEO VIP NGEWE",
+        "price": 50000,
+        "stock": 99995,
+        "category": "VIDEO VIP",
+        "description": "Video Vip kami bersifat link channel ya kak, di dalam channel-nya di update terus sampai 2000 video",
+        "rating": 5.0,
+        "sold": 5,
+        "content": "https://t.me/+YJ-69AVE7zc1ZjI1",
+        "image": "https://i.ibb.co/pBDZBkQ2/VIDEO-VIP.png"
+    },
+    "2": {
+        "name": "VIDEO VIP HIJAB",
+        "price": 50000,
+        "stock": 999999999,
+        "category": "VIDEO VIP",
+        "description": "Video Vip kami bersifat link channel ya kak, di dalam channel-nya di update terus sampai 2000 video",
+        "image": "/cancel",
+        "content": "https://t.me/+cKOFwecWRlo3ZDg1",
+        "rating": 5.0,
+        "sold": 0
+    }
+}

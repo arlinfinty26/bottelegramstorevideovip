@@ -1,0 +1,104 @@
+[
+    {
+        "time": "2026-09-14T07:38:35.734323",
+        "admin": "1227792372",
+        "action": "hapus_produk",
+        "detail": "ID:1 - Akun Premium Netflix 1 Bulan"
+    },
+    {
+        "time": "2026-09-14T07:38:45.901564",
+        "admin": "1227792372",
+        "action": "hapus_produk",
+        "detail": "ID:2 - Voucher Google Play Rp50.000"
+    },
+    {
+        "time": "2026-09-14T07:38:53.234680",
+        "admin": "1227792372",
+        "action": "hapus_produk",
+        "detail": "ID:3 - Jasa Desain Logo Premium"
+    },
+    {
+        "time": "2026-09-14T07:41:40.887925",
+        "admin": "1227792372",
+        "action": "tambah_produk",
+        "detail": "ID:1 - Video Vip"
+    },
+    {
+        "time": "2026-09-14T07:50:24.265759",
+        "admin": "1227792372",
+        "action": "update_payment",
+        "detail": "bca"
+    },
+    {
+        "time": "2026-09-14T07:51:59.226426",
+        "admin": "1227792372",
+        "action": "edit_produk",
+        "detail": "ID:1 field:name"
+    },
+    {
+        "time": "2026-09-15T07:54:52.183411",
+        "admin": "1227792372",
+        "action": "konfirmasi_order",
+        "detail": "INV202609150754258810071743"
+    },
+    {
+        "time": "2026-09-15T07:57:11.893760",
+        "admin": "1227792372",
+        "action": "konfirmasi_order",
+        "detail": "INV202609150756508810071743"
+    },
+    {
+        "time": "2026-09-15T08:11:30.833349",
+        "admin": "1227792372",
+        "action": "edit_produk",
+        "detail": "ID:1 field:content"
+    },
+    {
+        "time": "2026-09-15T08:19:29.615401",
+        "admin": "1227792372",
+        "action": "konfirmasi_order",
+        "detail": "INV202609150819218810071743"
+    },
+    {
+        "time": "2026-09-15T08:38:20.008557",
+        "admin": "1227792372",
+        "action": "konfirmasi_order",
+        "detail": "INV202609150837378810071743"
+    },
+    {
+        "time": "2026-09-15T08:44:17.103822",
+        "admin": "1227792372",
+        "action": "konfirmasi_order",
+        "detail": "INV202609150844121497366396"
+    },
+    {
+        "time": "2026-09-15T08:48:15.548825",
+        "admin": "1227792372",
+        "action": "edit_produk",
+        "detail": "ID:1 field:image"
+    },
+    {
+        "time": "2026-09-16T09:53:20.894075",
+        "admin": "1227792372",
+        "action": "tambah_produk",
+        "detail": "ID:2 - VIDEO VIP HIJAB"
+    },
+    {
+        "time": "2026-09-16T09:53:59.083704",
+        "admin": "1227792372",
+        "action": "edit_produk",
+        "detail": "ID:2 field:category"
+    },
+    {
+        "time": "2026-09-16T09:54:29.614914",
+        "admin": "1227792372",
+        "action": "edit_produk",
+        "detail": "ID:1 field:name"
+    },
+    {
+        "time": "2026-09-16T09:55:09.824477",
+        "admin": "1227792372",
+        "action": "update_payment",
+        "detail": "qris"
+    }
+]

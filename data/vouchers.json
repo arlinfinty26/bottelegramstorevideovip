@@ -1,0 +1,14 @@
+{
+    "ARLNEW": {
+        "type": "percent",
+        "value": 10,
+        "max_use": 100,
+        "used": 0
+    },
+    "ARLHEMAT": {
+        "type": "fixed",
+        "value": 5000,
+        "max_use": 50,
+        "used": 0
+    }
+}

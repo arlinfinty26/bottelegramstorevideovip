@@ -1,0 +1,17 @@
+{
+    "1": {
+        "name": "Akun Premium Netflix 1 Bulan",
+        "price": 50000,
+        "description": "Akun Netflix premium sharing 1 bulan, garansi 30 hari."
+    },
+    "2": {
+        "name": "Voucher Google Play Rp50.000",
+        "price": 48000,
+        "description": "Voucher Google Play Indonesia, langsung dikirim via chat."
+    },
+    "3": {
+        "name": "Jasa Desain Logo Premium",
+        "price": 150000,
+        "description": "Desain logo profesional, revisi 3x, file mentah."
+    }
+}

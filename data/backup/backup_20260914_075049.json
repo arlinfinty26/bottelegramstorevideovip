@@ -1,0 +1,67 @@
+{
+    "products": {
+        "1": {
+            "name": "Video Vip",
+            "price": 50000,
+            "stock": 100000,
+            "category": "VIDEO VIP",
+            "description": "Video Vip kami bersifat link channel ya kak, di dalam channel-nya di update terus sampai 2000 video",
+            "rating": 5.0,
+            "sold": 0
+        }
+    },
+    "users": {
+        "1227792372": {
+            "id": "1227792372",
+            "balance": 0,
+            "total_spent": 0,
+            "joined": "2026-09-14T07:37:29.029812",
+            "cart": {}
+        }
+    },
+    "orders": {},
+    "vouchers": {
+        "ARLNEW": {
+            "type": "percent",
+            "value": 10,
+            "max_use": 100,
+            "used": 0
+        },
+        "ARLHEMAT": {
+            "type": "fixed",
+            "value": 5000,
+            "max_use": 50,
+            "used": 0
+        }
+    },
+    "settings": {
+        "store_name": "ARL INFINITY",
+        "tagline": "Toko Digital Terpercaya",
+        "description": "ARL INFINITY adalah toko online terpercaya yang menyediakan berbagai produk digital & fisik berkualitas.",
+        "admin_username": "username_anda",
+        "channel_username": "channel_anda",
+        "payments": {
+            "bca": {
+                "name": "BCA",
+                "number": "1234567890",
+                "holder": "/cancel"
+            },
+            "dana": {
+                "name": "DANA",
+                "number": "081234567890",
+                "holder": "ARL INFINITY"
+            },
+            "gopay": {
+                "name": "GoPay",
+                "number": "081234567890",
+                "holder": "ARL INFINITY"
+            },
+            "qris": {
+                "name": "QRIS",
+                "number": "Scan QR di channel",
+                "holder": "ARL INFINITY"
+            }
+        },
+        "min_topup": 10000
+    }
+}
