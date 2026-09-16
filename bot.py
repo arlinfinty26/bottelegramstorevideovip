@@ -97,7 +97,7 @@ async def cmd_start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         f"Silakan pilih menu di bawah ini 🛒"
     )
 
-    image = getattr(config, "WELCOME_IMAGE", "")
+    image = (settings.get("welcome_image") or "").strip() or getattr(config, "WELCOME_IMAGE", "")
 
     if image:
         try:
@@ -188,7 +188,7 @@ async def on_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
         except Exception:
             pass
 
-        image = getattr(config, "WELCOME_IMAGE", "")
+        image = (settings.get("welcome_image") or "").strip() or getattr(config, "WELCOME_IMAGE", "")
 
         if image:
             try:
@@ -224,14 +224,15 @@ async def on_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await safe_edit(query, context, text, kb_back())
         return
 
-    # ---------- CATALOG (DENGAN FOTO) ----------
+    # ---------- CATALOG (DENGAN FOTO DARI SETTINGS) ----------
     if data == "catalog":
         if not products:
             await safe_edit(query, context, "❌ Belum ada produk tersedia.", kb_back())
             return
 
+        settings = db.get_settings()
         caption = "🛍️ *Katalog Produk*\n\nPilih kategori di bawah ini:"
-        image = "https://i.ibb.co/xtxmWcDp/katalog-produk.png"
+        image = (settings.get("catalog_image") or "").strip()
         kb = catalog_categories(products)
 
         try:
@@ -239,28 +240,58 @@ async def on_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
         except Exception:
             pass
 
-        try:
-            await context.bot.send_photo(
-                chat_id=uid,
-                photo=image,
-                caption=caption,
-                reply_markup=kb,
-                parse_mode="Markdown"
-            )
-        except Exception as e:
-            logger.error(f"Gagal kirim foto katalog: {e}")
-            await context.bot.send_message(
-                chat_id=uid,
-                text=caption,
-                reply_markup=kb,
-                parse_mode="Markdown"
-            )
+        if image:
+            try:
+                await context.bot.send_photo(
+                    chat_id=uid,
+                    photo=image,
+                    caption=caption,
+                    reply_markup=kb,
+                    parse_mode="Markdown"
+                )
+                return
+            except Exception as e:
+                logger.error(f"Gagal kirim foto katalog: {e}")
+
+        await context.bot.send_message(
+            chat_id=uid,
+            text=caption,
+            reply_markup=kb,
+            parse_mode="Markdown"
+        )
         return
 
+    # ---------- KATEGORI (DENGAN FOTO PER KATEGORI) ----------
     if data.startswith("cat_"):
         cat = data[4:]
-        await safe_edit(query, context, f"📂 Kategori: {cat}\n\nPilih produk:",
-                        category_products(cat, products))
+        caption = f"📂 *Kategori: {cat}*\n\nPilih produk:"
+        kb = category_products(cat, products)
+        cat_img = (db.get_category_image(cat) or "").strip()
+
+        try:
+            await query.message.delete()
+        except Exception:
+            pass
+
+        if cat_img:
+            try:
+                await context.bot.send_photo(
+                    chat_id=uid,
+                    photo=cat_img,
+                    caption=caption,
+                    reply_markup=kb,
+                    parse_mode="Markdown"
+                )
+                return
+            except Exception as e:
+                logger.error(f"Gagal kirim foto kategori {cat}: {e}")
+
+        await context.bot.send_message(
+            chat_id=uid,
+            text=caption,
+            reply_markup=kb,
+            parse_mode="Markdown"
+        )
         return
 
     # ---------- PRODUCT DETAIL (DENGAN FOTO) ----------
@@ -855,11 +886,4 @@ def main():
 
 
 if __name__ == "__main__":
-    print(">>> Memulai bot...")
-    try:
-        main()
-    except Exception as e:
-        print(f">>> ERROR: {e}")
-        import traceback
-        traceback.print_exc()
-        input("Tekan ENTER untuk keluar...")
+    main()
